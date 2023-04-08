@@ -8,6 +8,12 @@ import Create from "./Create";
 import Read from "./Read";
 import Update from "./Update";
 import Delete from "./Delete";
+import {
+  withAuthenticator,
+  AmplifySignOut
+} from '@aws-amplify/ui-react';
+import "@aws-amplify/ui-react/styles.css";
+
 
 const App = () => {
   const [items, setItems] = useState([
@@ -57,4 +63,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default withAuthenticator(App);
